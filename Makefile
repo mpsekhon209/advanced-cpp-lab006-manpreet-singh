@@ -10,7 +10,7 @@ all: $(TEST_TARGET)
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 
-$(TEST_TARGET): $(BUILD_DIR) tests/test_linked_lists.cpp
+$(TEST_TARGET): $(BUILD_DIR) tests/test_linked_lists.cpp include/singly_linked_list.h include/doubly_linked_list.h
 	$(CXX) $(CXXFLAGS) tests/test_linked_lists.cpp -o $@
 
 test: $(TEST_TARGET)
